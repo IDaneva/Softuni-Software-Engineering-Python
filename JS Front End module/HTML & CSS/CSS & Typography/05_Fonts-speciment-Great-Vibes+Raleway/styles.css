@@ -1,0 +1,23 @@
+body{
+    margin: 60px;
+}
+
+h2, h1 {
+    font-family: Great Vibes, cursive;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: disc;
+}
+
+ul.circle{
+    list-style: circle;
+}
+
+html {
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
