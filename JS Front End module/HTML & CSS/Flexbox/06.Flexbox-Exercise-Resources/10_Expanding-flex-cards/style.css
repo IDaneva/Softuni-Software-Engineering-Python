@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px 40px;
+}
+
+section{
+    display: flex;
+    gap: 12px;
+}
+
+img {
+    border-radius: 6px;
+    box-shadow: 1px 1px 100px 1px #888888;}
+
+img:nth-child(1) {
+    width: 75px;
+    object-fit: cover;
+}
+
+img:nth-child(2) {
+    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+}
+
+img:nth-child(3) {
+    width: 75px;
+    object-fit: cover;
+}
+
+img:nth-child(4) {
+    width: 75px;
+    object-fit: cover;
+} 

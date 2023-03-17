@@ -1,0 +1,28 @@
+body{
+    background-color: lightgray;
+    width: 500px;
+}
+
+body, ul, li, div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content:center;
+}
+
+ul{
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+li div{
+    background-color: white;
+    border: 5px solid black;
+    width: 100px;
+    height: 160px;
+    align-items: center;
+}
+
+img{
+    width: 90px;
+}

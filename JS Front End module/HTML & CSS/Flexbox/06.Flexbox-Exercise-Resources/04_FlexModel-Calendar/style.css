@@ -1,0 +1,60 @@
+div, section{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+div{
+    max-width: 65vw;
+    flex-direction: row;
+}
+
+span{
+    border: 1px solid black;
+
+}
+
+.notes{
+    flex-direction: column;
+}
+
+.type{
+    flex-direction: row;
+    width: 100%;
+}
+.workday{
+    width: calc(98.4% /5);
+}
+
+.offday{
+    width: calc(99.3%/2);
+}
+
+.week{
+    width: 50%;;
+}
+.notes{
+    width: 50%;
+    background-color: aquamarine;
+}
+
+div{
+    background-color: aqua;
+    height: 300px;
+}
+
+.notes span:nth-child(1){
+    height: 50%;
+    width: 100%;
+}
+
+.notes span:nth-child(2){
+    height: 48.9%;
+    width: 100%;
+}
+

@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.single-card{
+    background-color: white;
+    width: 200px;
+    height: 400px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(118, 118, 118);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+footer{
+    border-top: 1px solid gray;
+    margin-top: auto;
+}
+
+.single-card section, .single-card footer{
+    padding: 2px 20px;
+}
+
+.single-card:nth-of-type(2){
+    height: 450px;
+}
+
+.single-card:nth-of-type(3){
+    height: 600px;
+}
+
+.mansonry{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.col2 .single-card:nth-of-type(1){
+    height: 450px;
+}
+
+.col2 .single-card:nth-of-type(3){
+    height: 450px;
+}
+
+
+.col3 .single-card:nth-of-type(1){
+    height: 600px;
+}
+
+.col3 .single-card:nth-of-type(2){
+    height: 450px;
+}
+
+.flex{
+    display: flex;
+    gap: 12px;
+}
+
+.flex .cards .single-card{
+    height: 600px;
+}
