@@ -1,0 +1,179 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+body{
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* -------------- Header--------------- */
+
+header{
+    display: flex;
+    margin-bottom: 70px;
+}
+
+/* left heading -name of the company */
+header h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    letter-spacing: 2px;
+    margin-bottom: 1px;
+    margin-right: auto;
+    font-weight: bolder;
+
+}
+
+header h1 span{
+    color: rgb(49, 49, 49);
+    font-size: 10px;
+    letter-spacing: 0px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* navigation */
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    margin-right: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+
+}
+
+/* --------------Main --------------*/
+
+/* need a website section */
+
+.need{
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.need img{
+    width: 160px;
+    object-fit: cover;
+    margin-left: 60px;
+    
+}
+.website h3{
+    font-size: 36px;
+}
+
+.website p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.website{
+    width: 50%;
+}
+
+button{
+    all: unset;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 20px;
+    margin-bottom: 70px;
+}
+
+/* team section */
+
+.team h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.teammates{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.user-card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.id-image{
+    text-align: center;
+}
+
+.id-image img{
+    object-fit: cover;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: 2px double gray;
+}
+
+.user-card h5{
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.user-card h5, p{
+    text-align: center;
+}
+
+
+/* newsletter section */
+
+.newsletter{
+    background-color: purple;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+}
+
+.newsletter button{
+    background-color: white;
+    color: black;
+    border: unset;
+}
+
+.newsletter h3{
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+/* testimonials section */
+
+.testimonials h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* --------------Footer --------------*/
+
+.foot{
+    display: flex;
+}
+
+.foot h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    width: 100%;
+}
+
+.foot h2 span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 100%;
+}

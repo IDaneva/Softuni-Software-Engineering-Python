@@ -1,0 +1,158 @@
+body{
+    padding: 40px 80px;
+    background-color: rgb(238, 238, 238);
+}
+
+div.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1, h2, h3, blockquote{
+    font-family: Georgia, serif;
+}
+
+img{
+    background-color: rgb(255, 255, 255);
+}
+
+aside a{
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+}
+
+header h1{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+header{
+    width: 100vw;
+    border-bottom: 3px solid black;
+
+}
+
+main{
+    display: flex;
+}
+
+.page div{
+    width: 65vw;
+    margin-right: 90px;
+}
+
+div img:nth-of-type(1){
+    float: right;
+    width: 120px;
+    margin-left: 20px;
+    border: 4px double black;
+    margin-bottom: 10px;
+}
+
+div.quoute{
+    display: flex;
+    /* vertical-align: top; */
+}
+
+blockquote{
+    border-left: 4px solid gray;
+}
+
+blockquote p{
+    margin: 0px;
+    margin-left: 20px;
+    font-style: italic;
+}
+
+#Koko{
+    text-align: right;
+}
+
+div img:nth-of-type(2){
+    float: left;
+    width: 190px;
+    border: 4px double black;
+    margin-right: 30px;
+}
+
+@media (min-width:1800px) {
+    html{
+        font-size: 23px;
+    }
+    .page div{
+        width: 100%;
+    }
+}
+
+@media (min-width:1300px) {
+    html{
+        font-size: 21px;
+    }
+    .page div{
+        width: 100%;
+    }
+}
+
+@media (min-width:800px) {
+    html{
+        font-size: 18px;
+    }
+    .page div{
+        width: 100%;
+    }
+}
+
+@media (min-width:600px) {
+    html{
+        font-size: 16px;
+    }
+    .page div{
+        width: 100%;
+    }
+}
+
+
+@media (min-width:500px) {
+    html{
+        font-size: 14px;
+    }
+    .page div{
+        width: 100%;
+    }
+}
+
+@media (max-width:499px) {
+    html{
+        font-size: 12px;
+    }
+    .page div{
+        width: 100%;
+    }
+
+    div.quoute{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div img:nth-of-type(1){
+        width: 120px;
+        margin-left: 0px;
+        border: 4px double black;
+        margin-bottom: 10px;
+        float: unset;
+    }
+
+    div img:nth-of-type(2){
+        float: unset;
+        width: 170px;
+        border: 4px double black;
+        margin-right: 0px;
+    }
+
+    body{
+        padding: 20px 40px;
+        background-color: rgb(238, 238, 238);
+    }
+}
