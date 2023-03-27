@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Abril Fatface', cursive;
+ 
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section{
+    width: 80vw;
+    height: 100vh;
+    background-color: #f2f0f3;
+}
+
+.section img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.name{
+    width: 17%;
+    height: 30%;
+    box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+    padding: 1.5em;
+}
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.vertical-line{
+    height: 2px;
+    width: 50%;
+    background-color: white;
+}
+
+.name h3{
+    font-weight: 400;
+    font-size: smaller;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.desc{
+    background: rgb(186,177,173);
+    background: linear-gradient(90deg, rgba(186,177,173,1) 45%, rgba(255,255,255,1) 100%);
+    color: gray;
+    width: 25%;
+    height: 40%;
+    box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 9px 27px -6px rgba(0,0,0,0.75);
+    padding: 1rem 0.5rem;
+    text-align: end;
+    position: absolute;
+    top: 150px;
+    right: 170px;
+}
+
+
+span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.service h1{
+    padding-left: 40px;
+}
+
+.service ul li{
+    margin-bottom: 2rem;
+}
+
+i{
+    margin-right: 0.5rem;
+}
+
+.contacts{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.statistics{
+    background-color: #bab1ad;
+    width: 45%;
+    margin-left: 3.5rem;
+}
+
+main.section{
+    display: flex;
+}
+
+.statistics p{
+    text-transform: uppercase;
+}
+
+.statistics p:nth-of-type(odd){
+    color: white;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.statistics ul{
+    padding: 1rem;
+}
+
+.statistics p:nth-of-type(even){
+    font-size:0.75rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+#email{
+    all: unset;
+    background-color: #bab1ad;
+    color: white;
+    padding: 0.2rem 0.7rem;
+    width: 40%;
+    border-radius: 5px;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 40px;
+
+}
+
+button{
+    all: unset;
+    background-color: green;
+    padding: 0.2rem 0.7rem;
+    border-radius: 5px;
+    color: white;
+}
+
+main.section{
+    height: auto;
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+
+body{
+    font-family: 'Courgette', cursive;
+    background-color: #f5f5f5;
+    padding: 3rem 10rem;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+header h1{
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+header p{
+    margin-left: 13rem;
+    font-size: 1.5rem;
+    color: rgb(143, 0, 0);
+}
+
+main{
+    display: flex;
+    gap: 2rem;
+}
+
+main .card-box{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main .card-box img{
+
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 1rem;
+    
+}
+
+main .card-box h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.horizontal-line{
+    width: 90%;
+    height: 0.01rem;
+    background-color: rgb(143, 0, 0);
+    margin-bottom: 0.5rem;
+}
+
+#line{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-box div{
+    padding: 0.2rem;
+
+}
+
+button{
+    all: unset;
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+button i{
+    color: rgb(143, 0, 0);
+    margin-left: 0.5rem;
+}

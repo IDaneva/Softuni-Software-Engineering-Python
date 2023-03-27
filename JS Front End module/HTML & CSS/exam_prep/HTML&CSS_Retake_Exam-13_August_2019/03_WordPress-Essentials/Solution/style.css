@@ -1,0 +1,372 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* COLORS 
+blue - #234465
+orange #ffa000
+backgr #f2f2f2
+text #565656
+*/
+
+
+
+html{
+    font-family: 'Lato', sans-serif;
+    color: #565656;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* primary repetitive stuff */
+
+button.participate{
+    all: unset;
+    background-color: #ffa000;
+    color: white;
+    padding: 5px 60px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
+button.primary{
+    all: unset;
+    background-color: #ffa000;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ----------------------HEADER------------------------ */
+
+header{
+    background-color: #234465;
+    display: flex;
+    height: 15vh;
+    align-items: center;
+}
+
+header img{
+    width: 17%;
+    margin-right: 20px;
+}
+
+header ul{
+    display: flex;
+    gap: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+    
+}
+
+header ul li a{
+    color: gray;
+    font-weight: 600;
+}
+
+header button.primary{
+    margin-right: 60px;
+}
+
+nav{
+    margin-left: auto;
+}
+
+
+/* ----------------------MAIN------------------------ */
+
+
+/* addon */
+
+.addon{
+    background-color: white;
+    margin-left: 15vw;
+}
+
+.addon span:nth-of-type(1) a{
+    color: #ffa000;
+    margin-right: 20px;
+}
+
+.addon span:nth-of-type(2) a{
+    color: #234465;
+    font-weight: 700;
+}
+
+/* heading */
+
+.heading{
+    background-color: #88898a;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    width: 100%;
+}
+
+.heading h1{
+    font-weight: 800;
+}
+
+.heading ul{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+/* about */
+
+.about{
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    width: 90vw;
+    color: #234465;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about h2{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.about p{
+    margin: 5px 40px 20px 40px;
+}
+
+.about button{
+    align-self: center;
+    margin-bottom: 20px
+}
+
+
+/* knowledge */
+
+.knowledge{
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    width: 90vw;
+    color: #234465;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.knowledge h2{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.knowledge i{
+    color: #ffa000;
+    font-size: 24px;
+}
+
+.knowledge ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.knowledge ul li{
+    color: #565656;
+    width: 50%;
+}
+
+
+/* subjects */
+
+.subjects{
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    width: 90vw;
+    color: #234465;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.subjects h2{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.subjects ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subjects ul li{
+    color: #565656;
+    font-weight: 600;
+    background-color: #dadada;
+    width: 47%;
+    border-left: 4px solid #234465;
+}
+
+.subjects ul li span{
+    color: #234465;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* for-whom */
+
+.for-whom{
+    margin-top: 30px;
+    background-color: #ffa000;
+    width: 90vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 40px;
+}
+
+.for-whom h2{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/* info */
+
+
+.info{
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    width: 90vw;
+    color: #565656;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 40px;
+}
+
+.info h4{
+    color: #ffa000;
+}
+
+.info p{
+    margin-bottom: 20px;
+}
+
+.present, .online{
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.present h4, .online h4{
+    color: white;
+    width: 17%;
+}
+
+.online{
+    background-color: #ffa000;
+}
+
+.present{
+    background-color: #234465;
+}
+
+.present ul, .online ul{
+    margin: 0px;
+}
+
+/* lecturer */
+
+.lecturer{
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    width: 90vw;
+    color: #565656;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+}
+
+.lecturer h4, .lecturer h2{
+    color: #234465;
+    margin-bottom: 10px;
+}
+
+.lecturer h2{
+    text-align: center;
+}
+
+
+.lecturer div{
+    display: flex;
+}
+
+.lecturer div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.lec-info{
+    display: flex;
+    flex-direction: column;
+}
+
+button.participate:last-of-type{
+    margin-bottom: 60px;
+}
+/* footer */
+
+
+footer{
+    background-color: #234465;
+    color: white;
+    display: flex;
+    gap: 60px;
+    padding-top: 30px;
+    padding-left: 60px;
+    justify-content: space-around;
+}
+
+footer div{
+    max-width: 200px;
+}
+
+footer div ul{
+    padding: 0px;
+}
+
+footer div p{
+    color: #ffa000;
+}
+
+footer div.additional p{
+    color: white;
+}
+
+footer div.additional ul{
+    display: flex;
+    gap: 10px;
+}

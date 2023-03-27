@@ -1,0 +1,155 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0 3rem 0 3rem;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+/* section.page-content:nth-of-type(1) div{
+    height: 100vh;
+    width: 100vw;
+} */
+
+/* section.page-content:nth-of-type(1) div img{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} */
+
+.page-content header{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+}
+
+.page-content{
+    text-align: center;
+    color: white;
+    text-shadow: 4px 3px 6px rgba(0,0,0,0.31);
+
+}
+
+/* .page-content div{
+    position: absolute;
+    top: 20px;
+} */
+
+.page-content h1{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+button{
+    all: unset;
+}
+
+button:nth-of-type(1){
+    background-color: rgb(54, 246, 182);
+    padding: 0.4rem 1.1rem;
+    border-radius: 4px;
+
+}
+
+button:nth-of-type(2) i{
+    margin-left: 0.7rem;
+}
+
+.what{
+    display: flex;
+    gap: 3rem;
+    margin-top: -17px;
+}
+
+.what img{
+    width: 50%;
+}
+
+.what i{
+    margin-right: 1rem;
+    color: rgb(54, 246, 182);
+    margin-top: 1.5rem;
+}
+
+.what ul {
+    padding: 0;
+}
+
+.perfect{
+    display: flex;
+    
+}
+
+.perfect ul{
+    width: 60%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.perfect ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(54, 246, 182);
+    text-shadow: 4px 3px 6px rgba(0,0,0,0.31);
+}
+
+.perfect ul li img{
+    width: 90px;
+    height: 90px;
+}
+
+.perfect div{
+    text-align: center;
+    width: 50%;
+    padding-top: 2rem;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgb(54, 246, 182);
+    padding: 1.5rem 3rem;
+}
+
+.foot .questions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 2.5rem;
+}
+
+.foot .questions div{
+    text-align: center;
+    width: 320px;
+}
+
+section{
+    width: 95vw;
+}
