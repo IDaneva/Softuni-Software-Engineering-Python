@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+/* 
+#f6e0b5 - beige
+#66545e - purple
+*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    background-color: #f6e0b5;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-content{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    padding: 50px 90px;
+    gap: 50px;
+}
+
+.tabs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    
+}
+
+.card img{
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+.card{
+    background-color: #66545e;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.51);
+-webkit-box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.51);
+-moz-box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.51);
+}
+
+.card h2{
+    padding: 5px 7px;
+    font-weight: 500;
+}
+
+.categories{
+    color: #66545e;
+    font-size: 20px;
+}
+
+.categories h2{
+    font-weight: 500;
+}
+
+.categories ul{
+    padding: 0;
+}
+
+.categories ul li{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.categories ul li i{
+    margin-right: 10px;
+}
