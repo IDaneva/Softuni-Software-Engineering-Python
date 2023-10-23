@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.db import models
 
 CITIES = [
@@ -39,3 +41,14 @@ class Department(models.Model):
         editable=False,
         auto_now=True
     )
+
+
+class Project(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True)
+    budget = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    duration_in_days = models.PositiveIntegerField(verbose_name="Duration in Days", null=True)
+    estimated_hours = models.FloatField(null=True, verbose_name="Estimated Hours")
+    start_date = models.DateField(verbose_name="Start Date", null=True, default=date.today)
+    created_on = models.DateTimeField(editable=False, auto_now_add=True)
+    last_edited_on = models.DateTimeField(editable=False, auto_now=True)
