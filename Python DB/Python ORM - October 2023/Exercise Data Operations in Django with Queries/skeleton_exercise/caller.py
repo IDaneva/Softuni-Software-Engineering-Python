@@ -6,7 +6,7 @@ from django.db.models import F
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
 
-from main_app.models import Pet, Artifact, Location, Car, Task
+from main_app.models import Pet, Artifact, Location, Car, Task, HotelRoom
 
 
 def create_pet(name: str, species: str):
@@ -78,3 +78,43 @@ def encode_and_replace(text: str, task_title: str):
     for task in tasks_with_matching_title:
         task.description = decoded_text
         task.save()
+
+
+def get_deluxe_rooms():
+    rooms = HotelRoom.objects.filter(room_type="Deluxe")
+    even_id_deluxe_rooms = []
+    for room in rooms:
+        if room.id % 2 == 0:
+            even_id_deluxe_rooms.append(str(room))
+
+    return '\n'.join(even_id_deluxe_rooms)
+
+
+def increase_room_capacity():
+    rooms = HotelRoom.objects.all().order_by("id")
+
+    if not rooms:
+        return
+    previous_capacity = None
+    for room in rooms:
+        if not room.is_reserved:
+            return
+        if previous_capacity is None:
+            room.capacity += room.id
+
+        room.capacity += previous_capacity
+        previous_capacity = room.capacity
+        room.save()
+
+
+def reserve_first_room() -> None:
+    first_room = HotelRoom.objects.first()
+    first_room.is_reserved = True
+    first_room.save()
+
+
+def delete_last_room() -> None:
+    last_room = HotelRoom.objects.last()
+
+    if last_room.is_reserved:
+        last_room.delete()

@@ -55,3 +55,6 @@ class HotelRoom(models.Model):
     amenities = models.TextField()
     price_per_night = models.DecimalField(max_digits=8, decimal_places=2)
     is_reserved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.room_type} room with number {self.room_number} costs {self.price_per_night}$ per night!"
