@@ -93,12 +93,10 @@ def get_deluxe_rooms():
 def increase_room_capacity():
     rooms = HotelRoom.objects.all().order_by("id")
 
-    if not rooms:
-        return
     previous_capacity = None
     for room in rooms:
         if not room.is_reserved:
-            return
+            continue
         if previous_capacity is None:
             room.capacity += room.id
 
