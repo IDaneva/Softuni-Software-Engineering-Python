@@ -6,7 +6,7 @@ from django.db.models import Q
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
 
-from main_app.models import ArtworkGallery, Laptop, ChessPlayer
+from main_app.models import ArtworkGallery, Laptop, ChessPlayer, Meal, Dungeon, Workout
 
 
 def show_highest_rated_art():
@@ -95,3 +95,125 @@ def grand_chess_title_FM():
 def grand_chess_title_regular_player():
     ChessPlayer.objects.filter(rating__range=(0, 2199)).update(title="regular player")
 
+
+def set_new_chefs():
+    meals = Meal.objects.all()
+
+    for meal in meals:
+        if meal.meal_type == "Breakfast":
+            meal.chef = "Gordon Ramsay"
+            meal.save()
+        elif meal.meal_type == "Lunch":
+            meal.chef = "Julia Child"
+            meal.save()
+        elif meal.meal_type == "Dinner":
+            meal.chef = "Jamie Oliver"
+            meal.save()
+        elif meal.meal_type == "Snack":
+            meal.chef = "Thomas Keller"
+            meal.save()
+
+
+def set_new_preparation_times():
+    meals = Meal.objects.all()
+    for meal in meals:
+        if meal.meal_type == "Breakfast":
+            meal.preparation_time = "10 minutes"
+            meal.save()
+        elif meal.meal_type == "Lunch":
+            meal.preparation_time = "12 minutes"
+            meal.save()
+        elif meal.meal_type == "Dinner":
+            meal.preparation_time = "15 minutes"
+            meal.save()
+        elif meal.meal_type == "Snack":
+            meal.preparation_time = "5 minutes"
+            meal.save()
+
+
+def update_low_calorie_meals():
+    Meal.objects.filter(Q(meal_type="Breakfast") | Q(meal_type="Dinner")).update(calories=400)
+
+
+def update_high_calorie_meals():
+    Meal.objects.filter(Q(meal_type="Lunch") | Q(meal_type="Snack")).update(calories=700)
+
+
+def delete_lunch_and_snack_meals():
+    Meal.objects.filter(Q(meal_type="Lunch") | Q(meal_type="Snack")).delete()
+
+
+def show_hard_dungeons():
+    hard_objects = Dungeon.objects.filter(difficulty="Hard").order_by("-location")
+    result = []
+
+    for dungeon in hard_objects:
+        result.append(f"{dungeon.name} is guarded by {dungeon.boss_name} who has {dungeon.boss_health} health points!")
+
+    return "\n".join(result)
+
+
+def bulk_create_dungeons(*args):
+    Dungeon.objects.bulk_create(*args)
+
+
+def update_dungeon_names():
+    Dungeon.objects.filter(difficulty="Easy").update(name="The Erased Thombs")
+    Dungeon.objects.filter(difficulty="Medium").update(name="The Coral Labyrinth")
+    Dungeon.objects.filter(difficulty="Hard").update(name="The Lost Haunt")
+
+
+def update_dungeon_bosses_health():
+    Dungeon.objects.all().exclude(difficulty="Easy").update(boss_health=500)
+
+
+def update_dungeon_recommended_levels():
+    Dungeon.objects.filter(difficulty="Easy").update(recommended_level=25)
+    Dungeon.objects.filter(difficulty="Medium").update(recommended_level=50)
+    Dungeon.objects.filter(difficulty="Hard").update(recommended_level=75)
+
+
+def update_dungeon_rewards():
+    Dungeon.objects.filter(boss_health=500).update(reward="1000 Gold")
+    Dungeon.objects.filter(location__startswith="E").update(reward="New dungeon unlocked")
+    Dungeon.objects.filter(location__endswith="s").update(reward="Dragonheart Amulet")
+
+
+def set_new_locations():
+    Dungeon.objects.filter(recommended_level=25).update(location="Enchanted Maze")
+    Dungeon.objects.filter(recommended_level=50).update(location="Grimstone Mines")
+    Dungeon.objects.filter(recommended_level=75).update(location="Shadowed Abyss")
+
+
+def show_workouts():
+    workouts = Workout.objects.filter(Q(workout_type="Calisthenics") | Q(workout_type="CrossFit"))
+    results = []
+    for w in workouts:
+        results.append(f"{w.name} from {w.workout_type} type has {w.difficulty} difficulty!")
+
+    return "\n".join(results)
+
+
+def get_high_difficulty_cardio_workouts():
+    workouts = Workout.objects.filter(workout_type="Cardio").filter(difficulty="High").order_by("instructor")
+    return workouts
+
+
+def set_new_instructors():
+    Workout.objects.filter(workout_type="Cardio").update(instructor="John Smith")
+    Workout.objects.filter(workout_type="Strength").update(instructor="Michael Williams")
+    Workout.objects.filter(workout_type="Yoga").update(instructor="Emily Johnson")
+    Workout.objects.filter(workout_type="CrossFit").update(instructor="Sarah Davis")
+    Workout.objects.filter(workout_type="Calisthenics").update(instructor="Chris Heria")
+
+
+def set_new_duration_times():
+    Workout.objects.filter(instructor="John Smith").update(duration="15 minutes")
+    Workout.objects.filter(instructor="Sarah Davis").update(duration="30 minutes")
+    Workout.objects.filter(instructor="Chris Heria").update(duration="45 minutes")
+    Workout.objects.filter(instructor="Michael Williams").update(duration="1 hour")
+    Workout.objects.filter(instructor="Emily Johnson").update(duration="1 hour and 30 minutes")
+
+
+def delete_workouts():
+    Workout.objects.all().exclude(Q(workout_type="Strength") | Q(workout_type="Calisthenics")).delete()

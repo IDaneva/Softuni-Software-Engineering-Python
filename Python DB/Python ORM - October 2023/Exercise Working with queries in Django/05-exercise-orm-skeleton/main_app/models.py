@@ -44,6 +44,9 @@ class Dungeon(models.Model):
     boss_health = models.PositiveIntegerField()
     reward = models.TextField()
 
+    def __str__(self):
+        return f"Name: {self.name} - Difficulty {self.difficulty} Reward: {self.reward}"
+
 
 class Workout(models.Model):
     WORKOUT_TYPE_CHOICES = (
