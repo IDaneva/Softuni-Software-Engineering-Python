@@ -79,8 +79,6 @@ class DeleteCarView(views.DeleteView):
         form = super().get_form(form_class=form_class)
 
         for field_name, field in form.fields.items():
-            if isinstance(field, forms.CharField) and field_name == "type":
-                field.widget.attrs['disabled'] = True
+            field.widget.attrs['disabled'] = True
             field.widget.attrs['readonly'] = True
-
         return form
